@@ -10,18 +10,29 @@
 
 # print(find_even_numbers(numbers))
 
-family = {'father': 'John','mother': 'Jane','son': 'Mike'}
+# family = {'father': 'John','mother': 'Jane','son': 'Mike'}
 
-grades = ['A', 'B', 'A', 'C', 'B', 'A', 'D', 'C', 'B', 'A']
-def count_grades(grades):
-    "Return a dictionary with the count of each grade"
-    grade_count = {}
+# grades = ['A', 'B', 'A', 'C', 'B', 'A', 'D', 'C', 'B', 'A']
+# def count_grades(grades):
+#     "Return a dictionary with the count of each grade"
+#     grade_count = {}
 
-    for grade in grades:
-        if grade in grade_count:
-            grade_count[grade] += 1
-        else:
-            grade_count[grade] = 1
-    return grade_count
+#     for grade in grades:
+#         if grade in grade_count:
+#             grade_count[grade] += 1
+#         else:
+#             grade_count[grade] = 1
+#     return grade_count
 
-print(count_grades(grades))
+# print(count_grades(grades))
+
+from tkinter.font import names
+
+
+def student_summary(names,scores):
+    "Returns a dictionary of student summaries"
+    summary = {}
+    for name, score in zip(names, scores):
+        summary[name] = score
+    return summary
+print(student_summary(['Alice', 'Bob', 'Charlie'], [85, 92, 78]))
