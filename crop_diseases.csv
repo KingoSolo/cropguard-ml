@@ -1,0 +1,6 @@
+Crop_name,Disease,confidence_score,region
+Wheat,Rust,0.95,Lagos
+Rice,Blast,0.89,Nairobi
+Maize,Smut,0.92,Cairo
+Barley,Powdery Mildew,0.85,Johannesburg
+Soybean,Root Rot,0.9,Accra
