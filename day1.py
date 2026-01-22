@@ -23,3 +23,13 @@ def explore_dataset(file_name):
 
 summary = explore_dataset('crop_diseases.csv')
 print(summary)
+
+def diseases_stats(file_name): 
+     data = pd.read_csv(file_name)
+     data_filter = data[data['Disease'] != 'Healthy']
+     return { 
+          'total_diseases' : len(data_filter),
+          'diseases_by_crop' : data_filter.groupby('Crop_name').size().to_dict(),
+          'avg_confidence' : data_filter['Confidence_score'].mean(),
+          'low_confidence' : data_filter[data_filter['Confidence_score'] < 0.9]['Disease'].tolist()
+    }
