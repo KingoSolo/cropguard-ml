@@ -1,4 +1,4 @@
-Crop_name,Disease,confidence_score,region
+Crop_name,Disease,Confidence_score,Region
 Wheat,Rust,0.95,Lagos
 Rice,Blast,0.89,Nairobi
 Maize,Smut,0.92,Cairo
