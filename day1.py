@@ -33,3 +33,17 @@ def diseases_stats(file_name):
           'avg_confidence' : data_filter['Confidence_score'].mean(),
           'low_confidence' : data_filter[data_filter['Confidence_score'] < 0.9]['Disease'].tolist()
     }
+
+diseases_summary = diseases_stats('crop_diseases.csv')
+print(diseases_summary)
+
+def student_summary(names,scores):
+     summary = {}
+     for name, score in zip (names,scores):
+          if name not in summary and score > 70:
+               summary[name] = score
+     return summary
+students = ['Alice', 'Bob', 'Charlie', 'David', 'Eva', 'Frank']
+scores = [85, 67, 90, 45, 78, 88]
+student_results = student_summary(students, scores)
+print(student_results)
