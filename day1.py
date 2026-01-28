@@ -62,7 +62,7 @@ def normalize_array(arr):
     max_val = np.max(arr)
 
     if max_val == min_val:
-        return np.zeros(arr)
+        return np.zeros_like(arr)
     
     normalized = (arr - min_val) / (max_val - min_val)
     return normalized
